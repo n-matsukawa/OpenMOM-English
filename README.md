@@ -71,7 +71,6 @@ benchmark/ - Benchmark data
 
 datalib/ - Source code for the data creation library
 
-python/ - Python implementation source code (see Chapter 8)
 
 1.2.2 Notes for Windows Users
 Use this software at your own risk. The author accepts no responsibility for any damage or loss resulting from its use.
