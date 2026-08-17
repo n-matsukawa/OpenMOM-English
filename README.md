@@ -96,3 +96,10 @@ To uninstall OpenMOM, simply delete:
 The downloaded archive OpenMOM.zip
 The extracted OpenMOM folder
 No additional uninstallation procedure is required.
+
+## Attention
+For complete documentation, visit:
+
+https://ss023804.stars.ne.jp/OpenMOM/
+ 
+Browser translation is recommended for users who require the full manual.
