@@ -1,0 +1,17 @@
+OpenMOM 4 2
+title = loop antenna + load
+geometry = 1 2 0.05 0.05 -175 175 0 0 35
+feed = 1 0
+geometry = 1 2 0.05 0.05 175 185 0 0 1
+load = 1 50
+frequency = 500e6 1500e6 10
+ground = 0
+z0 = 50
+radiusall = 1 0.001
+geom3dnode = 0.1 1 0
+#plot3dgeom = 1
+plotsmith = 1
+plotzin = 1
+plotyin = 1
+plotref = 1
+end

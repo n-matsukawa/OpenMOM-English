@@ -1,0 +1,55 @@
+PROGRAM = ../omm
+#PROGRAM = ../omm_double
+
+OMPOPT = -fopenmp
+AVX    = -mavx
+SIMD   = -D_SIMD
+
+OBJS    =        \
+Main.o           \
+input_data.o     \
+monitor.o        \
+wiregrid.o       \
+allocfree.o      \
+solve.o          \
+zmatrix.o        \
+rhsvector.o      \
+planewave.o      \
+cholesky.o       \
+cdot.o           \
+zfeed.o          \
+writeout.o       \
+outputlog.o      \
+farfield.o       \
+plot3dGeom.o     \
+tokenize.o       \
+cputime.o        \
+ev3d.o
+
+CC      = gcc
+CFLAGS  = -O2 -I../include -Wall
+#CFLAGS  += -D_DOUBLE
+LDFLAGS = -O2
+LDFLAGS += $(OMPOPT)
+LIBS    = -lm
+
+$(PROGRAM): $(OBJS)
+	@echo "Loading $(PROGRAM) ... "
+	@$(CC) $(LDFLAGS) -o $(PROGRAM) $(OBJS) $(LIBS)
+
+Main.o: Main.c
+	$(CC) -c $(CFLAGS) $(OMPOPT) $?
+zmatrix.o: zmatrix.c
+	$(CC) -c $(CFLAGS) $(OMPOPT) $?
+cholesky.o: cholesky.c
+	$(CC) -c $(CFLAGS) $(OMPOPT) $?
+allocfree.o: allocfree.c
+	$(CC) -c $(CFLAGS) $(AVX) $(SIMD) $?
+cdot.o: cdot.c
+	$(CC) -c $(CFLAGS) $(AVX) $(SIMD) $?
+
+.c.o:
+	$(CC) -c $(CFLAGS) $<
+
+clean:
+	rm -f *.o

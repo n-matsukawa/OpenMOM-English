@@ -1,0 +1,22 @@
+OpenMOM 4 2
+title = square loop antenna
+geometry = 1 12 -0.025 0.025 0 0.025 11
+feed = 1 0
+radius = 0.001
+geometry = 1 11 0.025 -0.025 0.025 0 10
+radius = 0.001
+geometry = 1 12 0.025 -0.025 0 -0.025 11
+radius = 0.001
+geometry = 1 11 -0.025 0.025 -0.025 0 10
+radius = 0.001
+frequency = 1e9 2e9 10
+ground = 0
+z0 = 50
+radiusall = 2 0.2
+geom3dnode = 0.1 1 0
+#plot3dgeom = 1
+plotsmith = 1
+plotzin = 1
+plotyin = 1
+plotref = 1
+end

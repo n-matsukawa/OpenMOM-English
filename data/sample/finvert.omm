@@ -1,0 +1,18 @@
+OpenMOM 4 2
+title = f-invert antenna
+geometry = 2 21 0 -0.02 0 0.04 0 -0.11 4 10 15
+geometry = 2 11 0.004 0 0.04 0 -0.036 10 8
+geometry = 1 11 0 0.004 0 0 1
+feed = 1 0
+geometry = 1 11 0 0.004 0.004 0 1
+frequency = 800e6 1200e6 20
+ground = 0
+z0 = 50
+radiusall = 1 0.001
+geom3dnode = 0.1 1 0
+#plot3dgeom = 1
+plotsmith = 1
+plotzin = 1
+plotyin = 1
+plotref = 1
+end

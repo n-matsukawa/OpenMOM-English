@@ -1,0 +1,17 @@
+OpenMOM 4 2
+title = whip antenna
+geometry = 1 13 0.11 0.115 0 0 1
+feed = 1 0
+geometry = 1 13 0.115 0.2 0 0 17
+geometry = 2 21 0 0.04 0 0.01 0 0.11 8 2 22
+frequency = 600e6 1200e6 12
+ground = 0
+z0 = 50
+radiusall = 1 0.001
+geom3dnode = 0.1 1 0
+#plot3dgeom = 1
+plotsmith = 1
+plotzin = 1
+plotyin = 1
+plotref = 1
+end

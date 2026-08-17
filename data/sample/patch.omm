@@ -1,0 +1,20 @@
+OpenMOM 4 2
+title = patch antenna
+geometry = 2 13 0.002 -0.02 0.02 -0.02 0.02 10 10
+name = patch
+geometry = 1 13 0 0.002 0.008 0 1
+feed = 1 0
+name = feed
+geometry = 2 13 0 -0.032 0.032 -0.032 0.032 16 16
+name = ground
+frequency = 2e9 4e9 40
+ground = 0
+z0 = 50
+radiusall = 2 0.2
+geom3dnode = 0.1 1 0
+#plot3dgeom = 1
+plotsmith = 1
+plotzin = 1
+plotyin = 1
+plotref = 1
+end

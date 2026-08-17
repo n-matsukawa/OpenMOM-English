@@ -1,0 +1,23 @@
+OpenMOM 4 2
+title = monopole antenna
+geometry = 1 13 0 0.0025 0 0 1
+feed = 1 0
+radius = 0.001
+name = feed
+geometry = 1 13 0.0025 0.025 0 0 9
+radius = 0.001
+name = monopole
+geometry = 2 13 0 -0.025 0.025 -0.025 0.025 10 10
+radius = 0.001
+name = ground
+frequency = 2.0e9 4.0e9 20
+ground = 0
+z0 = 50
+radiusall = 2 0.2
+geom3dnode = 0.1 1 0
+#plot3dgeom = 1
+plotsmith = 1
+plotzin = 1
+plotyin = 1
+plotref = 1
+end

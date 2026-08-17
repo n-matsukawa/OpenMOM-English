@@ -1,0 +1,15 @@
+OpenMOM 4 2
+title = box
+geometry = 2 21 -0.03 0.03 -0.04 0.04 -0.02 0.02 12 16 8
+name = box
+geometry = 1 13 0.02 0.05 0 0 11
+feed = 1 0
+frequency = 2.0e9 3.0e9 10
+ground = 0
+z0 = 50
+radiusall = 2 0.2
+geom3dnode = 0.1 1 0
+#plot3dgeom = 1
+plotzin = 1
+plotyin = 1
+end

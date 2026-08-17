@@ -1,0 +1,16 @@
+OpenMOM 4 2
+title = loop antenna
+geometry = 1 2 0.05 0.05 -180 180 0 0 35
+feed = 1 0
+radius = 0.001
+frequency = 500e6 1500e6 20
+ground = 0
+z0 = 50
+radiusall = 2 0.2
+geom3dnode = 0.1 1 0
+#plot3dgeom = 1
+plotsmith = 1
+plotzin = 1
+plotyin = 1
+plotref = 1
+end

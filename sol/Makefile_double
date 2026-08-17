@@ -1,0 +1,52 @@
+PROGRAM = ../omm_double.exe
+
+OMPOPT = /openmp
+AVX    = /wd4752
+
+OBJS    =          \
+Main.obj           \
+input_data.obj     \
+monitor.obj        \
+wiregrid.obj       \
+allocfree.obj      \
+solve.obj          \
+zmatrix.obj        \
+rhsvector.obj      \
+planewave.obj      \
+cholesky.obj       \
+cdot.obj           \
+zfeed.obj          \
+writeout.obj       \
+outputlog.obj      \
+farfield.obj       \
+plot3dGeom.obj     \
+tokenize.obj       \
+cputime.obj        \
+ev3d.obj
+
+CC      = cl.exe
+CFLAGS  = /O2 /nologo /I../include /W4 /wd4996
+CFLAGS  = $(CFLAGS) /D_DOUBLE
+LDFLAGS = /O2 /nologo
+LIBS    =
+
+$(PROGRAM): $(OBJS)
+	@echo "Loading $(PROGRAM) ... "
+	@$(CC) $(LDFLAGS) /Fe$(PROGRAM) $(OBJS) $(LIBS)
+
+Main.obj:
+	$(CC) /c $(CFLAGS) $(OMPOPT) $?
+zmatrix.obj:
+	$(CC) /c $(CFLAGS) $(OMPOPT) $?
+cholesky.obj:
+	$(CC) /c $(CFLAGS) $(OMPOPT) $?
+allocfree.obj:
+	$(CC) /c $(CFLAGS) $(AVX) /D_SIMD $?
+cdot.obj:
+	$(CC) /c $(CFLAGS) $(AVX) /D_SIMD $?
+
+.c.obj:
+	$(CC) /c $(CFLAGS) $<
+
+clean:
+	del *.obj

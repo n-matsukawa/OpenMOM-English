@@ -1,0 +1,16 @@
+OpenMOM 4 2
+title = spiral antenna
+geometry = 1 2 0.03 0.001 2160 0 0 0 200
+geometry = 1 11 0.001 -0.001 0 0 5
+feed = 1 0
+geometry = 1 2 0.001 0.03 -180 1980 0 0 200
+frequency = 2.0e9 12.0e9 20
+ground = 0
+z0 = 189
+radiusall = 1 0.0001
+geom3dnode = 0.1 1 0
+#plot3dgeom = 1
+plotsmith = 1
+plotzin = 1
+plotyin = 1
+end
